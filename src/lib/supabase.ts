@@ -1,7 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+// 배포 환경에서 시크릿이 없으면 빈 문자열이 들어오므로 trim 후 판단
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL?.trim() || undefined;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY?.trim() || undefined;
 
 // .env 설정 여부 (미설정 시 화면에서 안내)
 export const isSupabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey);
