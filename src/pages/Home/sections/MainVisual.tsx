@@ -68,17 +68,13 @@ function LaptopSvg() {
   return (
     <svg viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="mv-screen" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#1D5BE0" />
-          <stop offset="1" stopColor="#0A2E86" />
-        </linearGradient>
         <linearGradient id="mv-body" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#E7ECF5" />
           <stop offset="1" stopColor="#B9C3D6" />
         </linearGradient>
       </defs>
       <rect x="64" y="16" width="352" height="232" rx="16" fill="#202A40" />
-      <rect x="78" y="30" width="324" height="204" rx="6" fill="url(#mv-screen)" />
+      <rect x="78" y="30" width="324" height="204" rx="6" fill="#0A43C2" />
       <rect x="102" y="58" width="120" height="12" rx="6" fill="#FFFFFF" fillOpacity="0.85" />
       <rect x="102" y="80" width="180" height="8" rx="4" fill="#FFFFFF" fillOpacity="0.35" />
       <rect x="102" y="96" width="150" height="8" rx="4" fill="#FFFFFF" fillOpacity="0.35" />
@@ -96,10 +92,8 @@ function LaptopSvg() {
 const Visual = styled.section`
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(640px 360px at 80% 30%, rgba(29, 91, 224, 0.45), transparent 70%),
-    linear-gradient(160deg, #141B2D 0%, #0D1424 100%);
-  color: #fff;
+  background: ${({ theme }) => theme.colors.surface};
+  color: ${({ theme }) => theme.colors.ink};
 `;
 
 const Inner = styled(Container)`
@@ -130,7 +124,7 @@ const Copy = styled.div`
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.02em;
-    color: #8DB0FF;
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   & > h1 {
@@ -143,14 +137,14 @@ const Copy = styled.div`
 
   & > h1 > em {
     font-style: normal;
-    color: #8DB0FF;
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   & > p {
     max-width: 440px;
     margin-top: 20px;
     font-size: 18px;
-    color: rgba(255, 255, 255, 0.72);
+    color: ${({ theme }) => theme.colors.muted};
   }
 
   & > .actions {
@@ -179,14 +173,14 @@ const Copy = styled.div`
     color: #fff;
   }
 
-  & > .actions > .primary:hover { background: #1D5BE0; }
+  & > .actions > .primary:hover { background: ${({ theme }) => theme.colors.primaryHover}; }
 
   & > .actions > .secondary {
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    color: #fff;
+    border: 1px solid ${({ theme }) => theme.colors.line};
+    color: ${({ theme }) => theme.colors.ink};
   }
 
-  & > .actions > .secondary:hover { background: rgba(255, 255, 255, 0.08); }
+  & > .actions > .secondary:hover { border-color: ${({ theme }) => theme.colors.subtle}; }
 
   & > ul {
     display: flex;
@@ -200,10 +194,10 @@ const Copy = styled.div`
     align-items: center;
     gap: 6px;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
+    color: ${({ theme }) => theme.colors.text};
   }
 
-  & > ul svg { color: #8DB0FF; }
+  & > ul svg { color: ${({ theme }) => theme.colors.primary}; }
 
   ${({ theme }) => theme.media.tablet} {
     & > h1 { font-size: 44px; }
@@ -232,11 +226,14 @@ const Illustration = styled.div`
   max-width: 520px;
   justify-self: center;
 
+  padding: 48px 32px 40px;
+  border-radius: ${({ theme }) => theme.radius.lg};
+  background: ${({ theme }) => theme.colors.primarySoft};
+
   & > svg {
     display: block;
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.4));
   }
 
   & > .float {
@@ -247,7 +244,8 @@ const Illustration = styled.div`
     padding: 12px 16px;
     border-radius: ${({ theme }) => theme.radius.md};
     background: ${({ theme }) => theme.colors.surface};
-    box-shadow: ${({ theme }) => theme.shadow.float};
+    border: 1px solid ${({ theme }) => theme.colors.line};
+    box-shadow: ${({ theme }) => theme.shadow.card};
     color: ${({ theme }) => theme.colors.ink};
   }
 
@@ -264,8 +262,8 @@ const Illustration = styled.div`
   }
 
   & > .float-top {
-    top: 6%;
-    right: -4%;
+    top: 20px;
+    right: -16px;
   }
 
   & > .float-top > span {
@@ -281,8 +279,8 @@ const Illustration = styled.div`
   }
 
   & > .float-bottom {
-    bottom: 4%;
-    left: -4%;
+    bottom: 20px;
+    left: -16px;
   }
 
   & > .float-bottom > svg { color: ${({ theme }) => theme.colors.primary}; }
@@ -290,14 +288,17 @@ const Illustration = styled.div`
   ${({ theme }) => theme.media.tablet} {
     max-width: 440px;
 
-    & > .float-top { right: 0; }
-    & > .float-bottom { left: 0; }
+    & > .float-top { right: 12px; }
+    & > .float-bottom { left: 12px; }
   }
 
   ${({ theme }) => theme.media.mobile} {
-    max-width: 320px;
+    padding: 36px 20px 28px;
+    border-radius: ${({ theme }) => theme.radius.md};
 
     & > .float { gap: 8px; padding: 8px 10px; }
+    & > .float-top { top: 10px; right: 8px; }
+    & > .float-bottom { bottom: 10px; left: 8px; }
     & > .float strong { font-size: 12px; }
     & > .float small { font-size: 11px; }
     & > .float-top > span { width: 28px; height: 28px; font-size: 14px; }

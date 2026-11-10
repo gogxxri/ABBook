@@ -7,7 +7,7 @@ import SalesReviews from './SalesReviews';
 
 export default function BoardSection() {
   return (
-    <Section>
+    <Section $tone="white">
       <Container>
         <SectionHeader eyebrow="COMMUNITY" title="실시간 문의와 매입 후기" />
         <Grid>

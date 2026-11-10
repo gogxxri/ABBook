@@ -32,8 +32,8 @@ export interface FaqItem {
 export const NAV_ITEMS = [
   { label: '빠른 견적', href: '/#quote' },
   { label: '판매 과정', href: '/#process' },
-  { label: '등급 기준', href: '/#grades' },
   { label: '단가표', href: '/#prices' },
+  { label: '등급 기준', href: '/#grades' },
   { label: '매입문의', href: '/inquiries' },
   { label: 'FAQ', href: '/#faq' },
 ] as const;

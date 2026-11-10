@@ -15,8 +15,8 @@ export default function HomePage() {
       <QuoteHero />
       <SellProcess />
       <SellMethods />
-      <GradeGuide />
       <PriceCategories />
+      <GradeGuide />
       <BoardSection />
       <Faq />
       <AboutContact />

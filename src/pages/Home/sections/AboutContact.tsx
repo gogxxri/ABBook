@@ -6,7 +6,7 @@ import { COMPANY_INFO } from '../../../constants/home';
 
 export default function AboutContact() {
   return (
-    <Section id="about">
+    <Section id="about" $tone="white">
       <Container>
         <Grid>
           <div className="about">

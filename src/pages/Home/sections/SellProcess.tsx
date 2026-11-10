@@ -6,7 +6,7 @@ import { SELL_STEPS } from '../../../constants/home';
 
 export default function SellProcess() {
   return (
-    <Section id="process">
+    <Section id="process" $tone="white">
       <Container>
         <SectionHeader eyebrow="PROCESS" title="네 단계면 판매 끝" description="신청부터 입금까지, 진행 상황을 단계마다 알려드려요." />
         <Steps>

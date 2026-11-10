@@ -173,9 +173,7 @@ export default function QuoteHero() {
 
 const Hero = styled.section`
   padding: 80px 0 96px;
-  background:
-    radial-gradient(1000px 420px at 85% 0%, rgba(10, 67, 194, 0.08), transparent 60%),
-    ${({ theme }) => theme.colors.surface};
+  background: ${({ theme }) => theme.colors.background};
 
   ${({ theme }) => theme.media.tablet} {
     padding: 56px 0 72px;

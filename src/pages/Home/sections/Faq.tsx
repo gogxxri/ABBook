@@ -8,7 +8,7 @@ import { FAQ_ITEMS } from '../../../constants/home';
 
 export default function Faq() {
   return (
-    <Section id="faq" $tone="white">
+    <Section id="faq">
       <Container>
         <Layout>
           <SectionHeader
