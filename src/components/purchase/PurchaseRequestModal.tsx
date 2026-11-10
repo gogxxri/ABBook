@@ -114,16 +114,16 @@ export default function PurchaseRequestModal({ isOpen, onClose, onSubmitted, ite
 const Summary = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 14px 16px;
+  gap: 0.625rem;
+  padding: 0.875rem 1rem;
   border-radius: ${({ theme }) => theme.radius.md};
   background: ${({ theme }) => theme.colors.background};
 
   & > div {
     display: flex;
     justify-content: space-between;
-    gap: 12px;
-    font-size: 14px;
+    gap: 0.75rem;
+    font-size: 0.875rem;
   }
 
   & span {
@@ -144,21 +144,21 @@ const Summary = styled.div`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 0.875rem;
 `;
 
 const Agree = styled.label`
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  font-size: 13px;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
   color: ${({ theme }) => theme.colors.text};
   cursor: pointer;
 
   & > input {
     flex-shrink: 0;
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
     margin: 2px 0 0;
     accent-color: ${({ theme }) => theme.colors.primary};
   }

@@ -20,24 +20,24 @@ export default function FloatingContact() {
 
 const Wrapper = styled.div`
   position: fixed;
-  right: 24px;
-  bottom: 24px;
+  right: 1.5rem;
+  bottom: 1.5rem;
   z-index: 40;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 10px;
+  gap: 0.625rem;
 
   & > a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    height: 46px;
-    min-width: 46px;
+    gap: 0.5rem;
+    height: 2.875rem;
+    min-width: 2.875rem;
     border-radius: ${({ theme }) => theme.radius.full};
     box-shadow: ${({ theme }) => theme.shadow.float};
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
   }
 
@@ -47,14 +47,14 @@ const Wrapper = styled.div`
   }
 
   & > .kakao {
-    padding: 0 16px;
+    padding: 0 1rem;
     background: ${({ theme }) => theme.colors.kakao};
     color: ${({ theme }) => theme.colors.kakaoText};
   }
 
   ${({ theme }) => theme.media.mobile} {
-    right: 16px;
-    bottom: 16px;
+    right: 1rem;
+    bottom: 1rem;
 
     & > .kakao { padding: 0; }
     & > .kakao > span { display: none; }

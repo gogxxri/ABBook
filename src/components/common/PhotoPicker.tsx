@@ -62,13 +62,13 @@ export default function PhotoPicker({ photos, onChange }: PhotoPickerProps) {
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 0.5rem;
 
   & > .thumb,
   & > .add {
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     border-radius: ${({ theme }) => theme.radius.sm};
     overflow: hidden;
   }
@@ -81,12 +81,12 @@ const Wrapper = styled.div`
 
   & > .thumb > button {
     position: absolute;
-    top: 4px;
-    right: 4px;
+    top: 0.25rem;
+    right: 0.25rem;
     display: grid;
     place-items: center;
-    width: 22px;
-    height: 22px;
+    width: 1.375rem;
+    height: 1.375rem;
     border-radius: 50%;
     background: rgba(17, 24, 39, 0.7);
     color: #fff;
@@ -99,13 +99,13 @@ const Wrapper = styled.div`
     justify-content: center;
     gap: 2px;
     border: 1.5px dashed ${({ theme }) => theme.colors.line};
-    font-size: 12px;
+    font-size: 0.75rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   & > .add:hover { border-color: ${({ theme }) => theme.colors.primary}; color: ${({ theme }) => theme.colors.primary}; }
 
   ${({ theme }) => theme.media.small} {
-    & > .thumb, & > .add { width: 72px; height: 72px; }
+    & > .thumb, & > .add { width: 4.5rem; height: 4.5rem; }
   }
 `;

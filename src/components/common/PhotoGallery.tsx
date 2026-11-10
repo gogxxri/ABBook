@@ -29,8 +29,8 @@ export default function PhotoGallery({ urls, isLoading, count }: PhotoGalleryPro
 
 const Grid = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+  gap: 0.5rem;
 
   & a {
     display: block;

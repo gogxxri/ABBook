@@ -39,14 +39,14 @@ export default function Footer() {
 }
 
 const Wrapper = styled.footer`
-  padding: 48px 0 96px;
+  padding: 3rem 0 6rem;
   background: ${({ theme }) => theme.colors.surface};
   border-top: 1px solid ${({ theme }) => theme.colors.line};
 
   & small {
     display: block;
-    margin-top: 24px;
-    font-size: 12px;
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
     color: ${({ theme }) => theme.colors.subtle};
   }
 `;
@@ -56,18 +56,18 @@ const Top = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 16px 24px;
-  padding-bottom: 24px;
+  gap: 1rem 1.5rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.line};
 
   & > ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 20px;
+    gap: 0.5rem 1.25rem;
   }
 
   & > ul a {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
     color: ${({ theme }) => theme.colors.text};
   }
@@ -76,14 +76,14 @@ const Top = styled.div`
 const Info = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-top: 24px;
-  font-size: 13px;
+  gap: 0.375rem;
+  margin-top: 1.5rem;
+  font-size: 0.8125rem;
   color: ${({ theme }) => theme.colors.muted};
 
   & > p {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px 16px;
+    gap: 0.25rem 1rem;
   }
 `;

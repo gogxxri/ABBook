@@ -83,7 +83,7 @@ export default function InquiryWritePage() {
             value={content}
             maxLength={5000}
             onChange={(event) => setContent(event.target.value)}
-            style={{ minHeight: 220 }}
+            style={{ minHeight: '13.75rem' }}
           />
         </Field>
         <Field label="사진 첨부" htmlFor="inquiry-photos" hint="제품 외관, 모델 스티커, 파손 부위 사진이 있으면 견적이 정확해져요. 작성자와 관리자만 볼 수 있어요.">
@@ -105,13 +105,13 @@ export default function InquiryWritePage() {
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 `;
 
 const Row = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 1rem;
 
   ${({ theme }) => theme.media.mobile} {
     grid-template-columns: minmax(0, 1fr);
@@ -121,7 +121,7 @@ const Row = styled.div`
 const Actions = styled.div`
   display: flex;
   justify-content: flex-end;
-  gap: 8px;
+  gap: 0.5rem;
 
   ${({ theme }) => theme.media.mobile} {
     & > button { flex: 1; }

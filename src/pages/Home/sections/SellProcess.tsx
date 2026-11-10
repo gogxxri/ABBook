@@ -67,13 +67,13 @@ const activeStyle = css`
 const Steps = styled.ol<{ $active: boolean }>`
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+  gap: 1.25rem;
 
   & > li {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
   }
 
   /* 단계 연결선: 회색 점선 + 채워지는 실선 */
@@ -81,9 +81,9 @@ const Steps = styled.ol<{ $active: boolean }>`
   & > li:not(:last-child)::before {
     content: '';
     position: absolute;
-    top: 22px;
-    left: 56px;
-    right: -8px;
+    top: 1.375rem;
+    left: 3.5rem;
+    right: -0.5rem;
     height: 2px;
   }
 
@@ -101,35 +101,35 @@ const Steps = styled.ol<{ $active: boolean }>`
   & .number {
     display: grid;
     place-items: center;
-    width: 44px;
-    height: 44px;
+    width: 2.75rem;
+    height: 2.75rem;
     border: 2px solid ${({ theme }) => theme.colors.line};
     border-radius: 50%;
     background: ${({ theme }) => theme.colors.surface};
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.subtle};
   }
 
   & h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   & p {
-    margin-top: 6px;
-    font-size: 15px;
+    margin-top: 0.375rem;
+    font-size: 0.9375rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   & small {
     display: inline-block;
-    margin-top: 12px;
-    padding: 2px 8px;
+    margin-top: 0.75rem;
+    padding: 2px 0.5rem;
     border-radius: ${({ theme }) => theme.radius.full};
     background: ${({ theme }) => theme.colors.background};
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.subtle};
   }
@@ -142,15 +142,15 @@ const Steps = styled.ol<{ $active: boolean }>`
 
     & > li {
       flex-direction: row;
-      gap: 16px;
-      padding-bottom: 28px;
+      gap: 1rem;
+      padding-bottom: 1.75rem;
     }
 
     & > li:not(:last-child)::after,
     & > li:not(:last-child)::before {
-      top: 48px;
-      bottom: 4px;
-      left: 21px;
+      top: 3rem;
+      bottom: 0.25rem;
+      left: 1.3125rem;
       right: auto;
       width: 2px;
       height: auto;
@@ -168,16 +168,16 @@ const Steps = styled.ol<{ $active: boolean }>`
     ${({ $active }) => $active && css`& > li:not(:last-child)::before { transform: scale(1); }`}
 
     & .number { flex-shrink: 0; }
-    & > li > div { padding-top: 10px; }
+    & > li > div { padding-top: 0.625rem; }
   }
 
   ${({ theme }) => theme.media.mobile} {
-    & .number { width: 40px; height: 40px; font-size: 13px; }
+    & .number { width: 2.5rem; height: 2.5rem; font-size: 0.8125rem; }
     & > li:not(:last-child)::after,
-    & > li:not(:last-child)::before { left: 19px; top: 44px; }
-    & > li > div { padding-top: 8px; }
-    & h3 { font-size: 16px; }
-    & p { font-size: 14px; }
+    & > li:not(:last-child)::before { left: 1.1875rem; top: 2.75rem; }
+    & > li > div { padding-top: 0.5rem; }
+    & h3 { font-size: 1rem; }
+    & p { font-size: 0.875rem; }
   }
 
   /* 움직임 최소화 설정 시 즉시 완료 상태로 */

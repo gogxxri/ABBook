@@ -119,16 +119,16 @@ export default function InquiryDetailPage() {
 const Locked = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  max-width: 360px;
-  margin: 24px auto;
+  gap: 1rem;
+  max-width: 22.5rem;
+  margin: 1.5rem auto;
   text-align: center;
 
   & > .icon {
     display: grid;
     place-items: center;
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
     margin: 0 auto;
     border-radius: 50%;
     background: ${({ theme }) => theme.colors.primarySoft};
@@ -136,7 +136,7 @@ const Locked = styled.form`
   }
 
   & > p {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
@@ -145,81 +145,81 @@ const Locked = styled.form`
   & > .actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    gap: 0.5rem;
   }
 `;
 
 const Article = styled.article`
   & > header {
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
     border-bottom: 1px solid ${({ theme }) => theme.colors.line};
   }
 
   & > header > h2 {
-    margin-top: 12px;
-    font-size: 22px;
+    margin-top: 0.75rem;
+    font-size: 1.375rem;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.ink};
     word-break: break-all;
   }
 
   & > header > p {
-    margin-top: 6px;
-    font-size: 13px;
+    margin-top: 0.375rem;
+    font-size: 0.8125rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   & > .content {
-    min-height: 120px;
-    padding: 24px 0;
-    font-size: 15px;
+    min-height: 7.5rem;
+    padding: 1.5rem 0;
+    font-size: 0.9375rem;
     line-height: 1.7;
     white-space: pre-wrap;
     word-break: break-all;
   }
 
-  & > .photos { padding-bottom: 24px; }
+  & > .photos { padding-bottom: 1.5rem; }
 
   & > .actions {
     display: flex;
     justify-content: flex-end;
-    gap: 8px;
-    margin-top: 24px;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
   }
 
   ${({ theme }) => theme.media.mobile} {
-    & > header > h2 { font-size: 18px; }
-    & > .content { font-size: 14px; }
+    & > header > h2 { font-size: 1.125rem; }
+    & > .content { font-size: 0.875rem; }
   }
 `;
 
 const Answer = styled.section`
-  padding: 20px;
+  padding: 1.25rem;
   border-radius: ${({ theme }) => theme.radius.md};
   background: ${({ theme }) => theme.colors.primarySoft};
 
   & > strong {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: ${({ theme }) => theme.colors.primary};
   }
 
   & > p {
-    margin-top: 8px;
-    font-size: 15px;
+    margin-top: 0.5rem;
+    font-size: 0.9375rem;
     line-height: 1.7;
     white-space: pre-wrap;
     color: ${({ theme }) => theme.colors.ink};
   }
 
   & > p.empty {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   & > small {
     display: block;
-    margin-top: 8px;
-    font-size: 12px;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 `;

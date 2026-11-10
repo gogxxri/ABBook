@@ -33,16 +33,16 @@ const Row = styled.li`
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 12px;
-  padding: 14px 0;
+  gap: 0.75rem;
+  padding: 0.875rem 0;
   border-top: 1px solid ${({ theme }) => theme.colors.line};
 
   & > .title {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 0.375rem;
     min-width: 0;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 600;
     color: ${({ theme }) => theme.colors.ink};
   }
@@ -60,17 +60,17 @@ const Row = styled.li`
 
   & > .meta {
     display: flex;
-    gap: 8px;
-    font-size: 13px;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
     color: ${({ theme }) => theme.colors.subtle};
     white-space: nowrap;
   }
 
   ${({ theme }) => theme.media.mobile} {
     grid-template-columns: auto minmax(0, 1fr);
-    gap: 6px 10px;
+    gap: 0.375rem 0.625rem;
 
-    & > .title { font-size: 14px; }
-    & > .meta { grid-column: 2; font-size: 12px; }
+    & > .title { font-size: 0.875rem; }
+    & > .meta { grid-column: 2; font-size: 0.75rem; }
   }
 `;

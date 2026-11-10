@@ -43,7 +43,7 @@ export default function InquiryBoard() {
 
 export const Panel = styled.article`
   min-width: 0;
-  padding: 28px;
+  padding: 1.75rem;
   border: 1px solid ${({ theme }) => theme.colors.line};
   border-radius: ${({ theme }) => theme.radius.lg};
   background: ${({ theme }) => theme.colors.surface};
@@ -54,7 +54,7 @@ export const Panel = styled.article`
   }
 
   ${({ theme }) => theme.media.mobile} {
-    padding: 20px 16px;
+    padding: 1.25rem 1rem;
     border-radius: ${({ theme }) => theme.radius.md};
   }
 `;
@@ -63,10 +63,10 @@ export const PanelHead = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 
   & > h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.ink};
   }
@@ -75,12 +75,12 @@ export const PanelHead = styled.div`
     display: inline-flex;
     align-items: center;
     gap: 2px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   ${({ theme }) => theme.media.mobile} {
-    & > h3 { font-size: 18px; }
+    & > h3 { font-size: 1.125rem; }
   }
 `;

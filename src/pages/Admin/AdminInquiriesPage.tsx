@@ -58,7 +58,7 @@ export default function AdminInquiriesPage() {
                   <strong>
                     {inquiry.title}
                     {inquiry.photo_paths.length > 0 && (
-                      <ImageIcon size={14} aria-label={`사진 ${inquiry.photo_paths.length}장`} style={{ marginLeft: 6, verticalAlign: -2 }} />
+                      <ImageIcon size={14} aria-label={`사진 ${inquiry.photo_paths.length}장`} style={{ marginLeft: '0.375rem', verticalAlign: '-2px' }} />
                     )}
                   </strong>
                   <p>{inquiry.content}</p>
@@ -149,20 +149,20 @@ function AnswerModal({ inquiry, onClose }: AnswerModalProps) {
         )}
       </Question>
       <Field label="답변" htmlFor="inquiry-answer">
-        <Textarea id="inquiry-answer" value={answer} onChange={(event) => setAnswer(event.target.value)} style={{ minHeight: 180 }} />
+        <Textarea id="inquiry-answer" value={answer} onChange={(event) => setAnswer(event.target.value)} style={{ minHeight: '11.25rem' }} />
       </Field>
     </Modal>
   );
 }
 
 const Question = styled.div`
-  padding: 16px;
+  padding: 1rem;
   border-radius: ${({ theme }) => theme.radius.md};
   background: ${({ theme }) => theme.colors.background};
 
   & > strong {
     display: block;
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: ${({ theme }) => theme.colors.ink};
     word-break: break-all;
   }
@@ -170,17 +170,17 @@ const Question = styled.div`
   & > span {
     display: block;
     margin-top: 2px;
-    font-size: 12px;
+    font-size: 0.75rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   & > p {
-    margin-top: 12px;
-    font-size: 14px;
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
     line-height: 1.7;
     white-space: pre-wrap;
     word-break: break-all;
   }
 
-  & > .photos { margin-top: 14px; }
+  & > .photos { margin-top: 0.875rem; }
 `;

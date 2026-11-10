@@ -84,7 +84,7 @@ const Bar = styled.header`
   top: 0;
   z-index: 50;
   background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(0.75rem);
   border-bottom: 1px solid ${({ theme }) => theme.colors.line};
 `;
 
@@ -92,16 +92,16 @@ const Inner = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 1.5rem;
   height: ${({ theme }) => theme.layout.headerHeight};
 `;
 
 const Nav = styled.nav`
   display: flex;
-  gap: 28px;
+  gap: 1.75rem;
 
   & > a {
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 600;
     color: ${({ theme }) => theme.colors.text};
     white-space: nowrap;
@@ -118,14 +118,14 @@ const Nav = styled.nav`
 const Actions = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 
   & > .phone {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    margin-right: 8px;
-    font-size: 15px;
+    gap: 0.375rem;
+    margin-right: 0.5rem;
+    font-size: 0.9375rem;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.ink};
     white-space: nowrap;
@@ -139,8 +139,8 @@ const Actions = styled.div`
 const MenuButton = styled.button`
   display: none;
   place-items: center;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: ${({ theme }) => theme.radius.sm};
   color: ${({ theme }) => theme.colors.ink};
 
@@ -169,7 +169,7 @@ const Drawer = styled.aside<{ $open: boolean }>`
   z-index: 70;
   display: flex;
   flex-direction: column;
-  width: min(360px, 100%);
+  width: min(22.5rem, 100%);
   background: ${({ theme }) => theme.colors.surface};
   transform: translateX(${({ $open }) => ($open ? '0' : '100%')});
   visibility: ${({ $open }) => ($open ? 'visible' : 'hidden')};
@@ -181,7 +181,7 @@ const DrawerHead = styled.div`
   align-items: center;
   justify-content: space-between;
   height: ${({ theme }) => theme.layout.headerHeight};
-  padding: 0 16px 0 20px;
+  padding: 0 1rem 0 1.25rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.line};
 
   & > button { display: grid; }
@@ -190,13 +190,13 @@ const DrawerHead = styled.div`
 const DrawerNav = styled.nav`
   flex: 1;
   overflow-y: auto;
-  padding: 12px 8px;
+  padding: 0.75rem 0.5rem;
 
   & > a {
     display: block;
-    padding: 14px 12px;
+    padding: 0.875rem 0.75rem;
     border-radius: ${({ theme }) => theme.radius.sm};
-    font-size: 17px;
+    font-size: 1.0625rem;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.ink};
   }
@@ -207,12 +207,12 @@ const DrawerNav = styled.nav`
 const DrawerFoot = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 20px;
+  gap: 1rem;
+  padding: 1.25rem;
   border-top: 1px solid ${({ theme }) => theme.colors.line};
 
   & > p {
-    font-size: 13px;
+    font-size: 0.8125rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 

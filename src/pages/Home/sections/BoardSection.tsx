@@ -22,13 +22,13 @@ export default function BoardSection() {
 const Grid = styled.div`
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-  gap: 20px;
+  gap: 1.25rem;
 
   ${({ theme }) => theme.media.tablet} {
     grid-template-columns: minmax(0, 1fr);
   }
 
   ${({ theme }) => theme.media.mobile} {
-    gap: 12px;
+    gap: 0.75rem;
   }
 `;

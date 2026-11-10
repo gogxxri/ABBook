@@ -147,21 +147,21 @@ function ReviewModal({ review, onClose }: ReviewModalProps) {
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 0.875rem;
 `;
 
 const Toggle = styled.label`
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 14px;
+  gap: 0.5rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: ${({ theme }) => theme.colors.ink};
   cursor: pointer;
 
   & > input {
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
     margin: 0;
     accent-color: ${({ theme }) => theme.colors.primary};
   }

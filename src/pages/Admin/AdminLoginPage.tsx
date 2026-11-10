@@ -77,28 +77,28 @@ const Wrapper = styled.main`
   display: grid;
   place-items: center;
   min-height: 100dvh;
-  padding: 16px;
+  padding: 1rem;
 `;
 
 const Card = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
   width: 100%;
-  max-width: 380px;
-  padding: 32px 28px;
+  max-width: 23.75rem;
+  padding: 2rem 1.75rem;
   border: 1px solid ${({ theme }) => theme.colors.line};
   border-radius: ${({ theme }) => theme.radius.lg};
   background: ${({ theme }) => theme.colors.surface};
   box-shadow: ${({ theme }) => theme.shadow.card};
 
   & > h1 {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.ink};
   }
 
   ${({ theme }) => theme.media.mobile} {
-    padding: 24px 18px;
+    padding: 1.5rem 1.125rem;
   }
 `;

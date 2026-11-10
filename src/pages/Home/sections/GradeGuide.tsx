@@ -45,7 +45,7 @@ export default function GradeGuide() {
   );
 }
 
-const COLUMNS = '72px 140px minmax(0, 1fr) 160px';
+const COLUMNS = '4.5rem 8.75rem minmax(0, 1fr) 10rem';
 
 const Table = styled.div`
   border-top: 1px solid ${({ theme }) => theme.colors.ink};
@@ -55,14 +55,14 @@ const Table = styled.div`
     display: grid;
     grid-template-columns: ${COLUMNS};
     align-items: center;
-    gap: 16px;
-    padding: 0 8px;
+    gap: 1rem;
+    padding: 0 0.5rem;
   }
 
   & > .head {
-    height: 44px;
+    height: 2.75rem;
     border-bottom: 1px solid ${({ theme }) => theme.colors.line};
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 600;
     color: ${({ theme }) => theme.colors.muted};
   }
@@ -71,9 +71,9 @@ const Table = styled.div`
   & .rate { text-align: right; }
 
   & li {
-    min-height: 76px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    min-height: 4.75rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid ${({ theme }) => theme.colors.line};
     transition: background 0.15s ease;
   }
@@ -81,25 +81,25 @@ const Table = styled.div`
   & li:hover { background: ${({ theme }) => theme.colors.surface}; }
 
   & .grade {
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 900;
     line-height: 1;
     color: var(--grade-color);
   }
 
   & .name {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.ink};
   }
 
   & .criteria {
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: ${({ theme }) => theme.colors.text};
   }
 
   & .rate {
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 700;
     color: var(--grade-color);
     white-space: nowrap;
@@ -109,19 +109,19 @@ const Table = styled.div`
     & > .head { display: none; }
 
     & li {
-      grid-template-columns: 36px minmax(0, 1fr) auto;
+      grid-template-columns: 2.25rem minmax(0, 1fr) auto;
       grid-template-areas:
         'grade name rate'
         'grade criteria criteria';
       align-items: start;
-      gap: 4px 12px;
+      gap: 0.25rem 0.75rem;
       min-height: 0;
-      padding: 16px 4px;
+      padding: 1rem 0.25rem;
     }
 
-    & .grade { grid-area: grade; font-size: 24px; }
-    & .name { grid-area: name; font-size: 15px; }
-    & .rate { grid-area: rate; font-size: 13px; }
-    & .criteria { grid-area: criteria; font-size: 13px; color: ${({ theme }) => theme.colors.muted}; }
+    & .grade { grid-area: grade; font-size: 1.5rem; }
+    & .name { grid-area: name; font-size: 0.9375rem; }
+    & .rate { grid-area: rate; font-size: 0.8125rem; }
+    & .criteria { grid-area: criteria; font-size: 0.8125rem; color: ${({ theme }) => theme.colors.muted}; }
   }
 `;

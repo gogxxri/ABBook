@@ -7,9 +7,9 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    min-width: 320px;
+    min-width: 20rem;
     font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
     color: ${({ theme }) => theme.colors.text};
     background: ${({ theme }) => theme.colors.background};

@@ -53,20 +53,20 @@ export default function AboutContact() {
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 27.5rem);
   align-items: center;
-  gap: 64px;
+  gap: 4rem;
 
   & > .about > span {
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     color: ${({ theme }) => theme.colors.primary};
   }
 
   & > .about > h2 {
-    margin-top: 10px;
-    font-size: 34px;
+    margin-top: 0.625rem;
+    font-size: 2.125rem;
     line-height: 1.3;
     font-weight: 800;
     letter-spacing: -0.02em;
@@ -74,41 +74,41 @@ const Grid = styled.div`
   }
 
   & > .about > p {
-    max-width: 520px;
-    margin-top: 16px;
-    font-size: 16px;
+    max-width: 32.5rem;
+    margin-top: 1rem;
+    font-size: 1rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   & > .about > a {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    margin-top: 24px;
-    font-size: 15px;
+    gap: 0.375rem;
+    margin-top: 1.5rem;
+    font-size: 0.9375rem;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.primary};
   }
 
   ${({ theme }) => theme.media.tablet} {
     grid-template-columns: minmax(0, 1fr);
-    gap: 32px;
+    gap: 2rem;
   }
 
   ${({ theme }) => theme.media.mobile} {
-    & > .about > h2 { font-size: 24px; }
-    & > .about > p { font-size: 15px; }
+    & > .about > h2 { font-size: 1.5rem; }
+    & > .about > p { font-size: 0.9375rem; }
   }
 `;
 
 const ContactCard = styled.div`
-  padding: 28px;
+  padding: 1.75rem;
   border-radius: ${({ theme }) => theme.radius.lg};
   background: ${({ theme }) => theme.colors.surface};
   box-shadow: ${({ theme }) => theme.shadow.card};
 
   & > h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.ink};
   }
@@ -116,17 +116,17 @@ const ContactCard = styled.div`
   & > p {
     display: flex;
     align-items: center;
-    gap: 6px;
-    margin-top: 6px;
-    font-size: 13px;
+    gap: 0.375rem;
+    margin-top: 0.375rem;
+    font-size: 0.8125rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   & > ul {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-top: 20px;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
   }
 
   & a {
@@ -134,8 +134,8 @@ const ContactCard = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 4px 12px;
-    padding: 14px 16px;
+    gap: 0.25rem 0.75rem;
+    padding: 0.875rem 1rem;
     border: 1px solid ${({ theme }) => theme.colors.line};
     border-radius: ${({ theme }) => theme.radius.md};
     transition: border-color 0.15s ease;
@@ -144,22 +144,22 @@ const ContactCard = styled.div`
   & a:hover { border-color: ${({ theme }) => theme.colors.primary}; }
 
   & a > span {
-    font-size: 13px;
+    font-size: 0.8125rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   & a > strong {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 17px;
+    gap: 0.375rem;
+    font-size: 1.0625rem;
     color: ${({ theme }) => theme.colors.ink};
   }
 
   & a > strong > svg { color: ${({ theme }) => theme.colors.primary}; }
 
   ${({ theme }) => theme.media.mobile} {
-    padding: 20px 16px;
+    padding: 1.25rem 1rem;
     border-radius: ${({ theme }) => theme.radius.md};
   }
 `;

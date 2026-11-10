@@ -17,18 +17,18 @@ export const theme = {
     warningSoft: '#FEF3C7',
   },
   radius: {
-    sm: '8px',
-    md: '12px',
-    lg: '20px',
+    sm: '0.5rem',
+    md: '0.75rem',
+    lg: '1.25rem',
     full: '999px',
   },
   shadow: {
-    card: '0 1px 2px rgba(17, 24, 39, 0.04), 0 8px 24px rgba(17, 24, 39, 0.06)',
-    float: '0 12px 32px rgba(17, 24, 39, 0.18)',
+    card: '0 1px 2px rgba(17, 24, 39, 0.04), 0 0.5rem 1.5rem rgba(17, 24, 39, 0.06)',
+    float: '0 0.75rem 2rem rgba(17, 24, 39, 0.18)',
   },
   layout: {
-    maxWidth: '1200px',
-    headerHeight: '64px',
+    maxWidth: '75rem',
+    headerHeight: '4rem',
   },
   media: {
     tablet: '@media (max-width: 1023px)',

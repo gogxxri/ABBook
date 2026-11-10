@@ -53,7 +53,7 @@ const Backdrop = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
+  padding: 1rem;
   background: rgba(17, 24, 39, 0.5);
 
   ${({ theme }) => theme.media.mobile} {
@@ -66,8 +66,8 @@ const Dialog = styled.div<{ $width: number }>`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: ${({ $width }) => $width}px;
-  max-height: calc(100dvh - 32px);
+  max-width: ${({ $width }) => $width / 16}rem;
+  max-height: calc(100dvh - 2rem);
   border-radius: ${({ theme }) => theme.radius.lg};
   background: ${({ theme }) => theme.colors.surface};
   box-shadow: ${({ theme }) => theme.shadow.float};
@@ -76,13 +76,13 @@ const Dialog = styled.div<{ $width: number }>`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
-    padding: 18px 20px;
+    gap: 0.75rem;
+    padding: 1.125rem 1.25rem;
     border-bottom: 1px solid ${({ theme }) => theme.colors.line};
   }
 
   & > header > h2 {
-    font-size: 17px;
+    font-size: 1.0625rem;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.ink};
   }
@@ -90,8 +90,8 @@ const Dialog = styled.div<{ $width: number }>`
   & > header > button {
     display: grid;
     place-items: center;
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     border-radius: ${({ theme }) => theme.radius.sm};
     color: ${({ theme }) => theme.colors.muted};
   }
@@ -99,16 +99,16 @@ const Dialog = styled.div<{ $width: number }>`
   & > .body {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    padding: 20px;
+    gap: 0.875rem;
+    padding: 1.25rem;
     overflow-y: auto;
   }
 
   & > footer {
     display: flex;
     justify-content: flex-end;
-    gap: 8px;
-    padding: 14px 20px;
+    gap: 0.5rem;
+    padding: 0.875rem 1.25rem;
     border-top: 1px solid ${({ theme }) => theme.colors.line};
   }
 
@@ -117,8 +117,8 @@ const Dialog = styled.div<{ $width: number }>`
     max-height: 92dvh;
     border-radius: ${({ theme }) => theme.radius.lg} ${({ theme }) => theme.radius.lg} 0 0;
 
-    & > .body { padding: 16px; }
-    & > footer { padding: 12px 16px; }
+    & > .body { padding: 1rem; }
+    & > footer { padding: 0.75rem 1rem; }
     & > footer > button { flex: 1; }
   }
 `;

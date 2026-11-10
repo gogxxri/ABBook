@@ -98,38 +98,38 @@ const Visual = styled.section`
 
 const Inner = styled(Container)`
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 520px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 32.5rem);
   align-items: center;
-  gap: 48px;
-  min-height: 560px;
-  padding-top: 72px;
-  padding-bottom: 72px;
+  gap: 3rem;
+  min-height: 35rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
 
   ${({ theme }) => theme.media.tablet} {
     grid-template-columns: minmax(0, 1fr);
     min-height: 0;
-    padding-top: 56px;
-    padding-bottom: 56px;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
   }
 
   ${({ theme }) => theme.media.mobile} {
-    gap: 32px;
-    padding-top: 40px;
-    padding-bottom: 44px;
+    gap: 2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.75rem;
   }
 `;
 
 const Copy = styled.div`
   & > .eyebrow {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     letter-spacing: 0.02em;
     color: ${({ theme }) => theme.colors.primary};
   }
 
   & > h1 {
-    margin-top: 16px;
-    font-size: 56px;
+    margin-top: 1rem;
+    font-size: 3.5rem;
     line-height: 1.2;
     font-weight: 800;
     letter-spacing: -0.035em;
@@ -141,28 +141,28 @@ const Copy = styled.div`
   }
 
   & > p {
-    max-width: 440px;
-    margin-top: 20px;
-    font-size: 18px;
+    max-width: 27.5rem;
+    margin-top: 1.25rem;
+    font-size: 1.125rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   & > .actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 32px;
+    gap: 0.625rem;
+    margin-top: 2rem;
   }
 
   & > .actions > a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    height: 46px;
-    padding: 0 20px;
+    gap: 0.375rem;
+    height: 2.875rem;
+    padding: 0 1.25rem;
     border-radius: ${({ theme }) => theme.radius.sm};
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 700;
     white-space: nowrap;
     transition: background 0.15s ease;
@@ -185,36 +185,36 @@ const Copy = styled.div`
   & > ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 20px;
-    margin-top: 36px;
+    gap: 0.5rem 1.25rem;
+    margin-top: 2.25rem;
   }
 
   & > ul > li {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 14px;
+    gap: 0.375rem;
+    font-size: 0.875rem;
     color: ${({ theme }) => theme.colors.text};
   }
 
   & > ul svg { color: ${({ theme }) => theme.colors.primary}; }
 
   ${({ theme }) => theme.media.tablet} {
-    & > h1 { font-size: 44px; }
+    & > h1 { font-size: 2.75rem; }
   }
 
   ${({ theme }) => theme.media.mobile} {
-    & > .eyebrow { font-size: 13px; }
-    & > h1 { margin-top: 12px; font-size: 32px; }
-    & > p { margin-top: 14px; font-size: 15px; }
-    & > .actions { margin-top: 24px; }
-    & > .actions > a { flex: 1; height: 44px; padding: 0 14px; font-size: 14px; }
-    & > ul { margin-top: 24px; gap: 8px 14px; }
-    & > ul > li { font-size: 13px; }
+    & > .eyebrow { font-size: 0.8125rem; }
+    & > h1 { margin-top: 0.75rem; font-size: 2rem; }
+    & > p { margin-top: 0.875rem; font-size: 0.9375rem; }
+    & > .actions { margin-top: 1.5rem; }
+    & > .actions > a { flex: 1; height: 2.75rem; padding: 0 0.875rem; font-size: 0.875rem; }
+    & > ul { margin-top: 1.5rem; gap: 0.5rem 0.875rem; }
+    & > ul > li { font-size: 0.8125rem; }
   }
 
   ${({ theme }) => theme.media.small} {
-    & > h1 { font-size: 28px; }
+    & > h1 { font-size: 1.75rem; }
     & > .actions { flex-direction: column; }
     & > .actions > a { flex: none; width: 100%; }
   }
@@ -223,10 +223,10 @@ const Copy = styled.div`
 const Illustration = styled.div`
   position: relative;
   width: 100%;
-  max-width: 520px;
+  max-width: 32.5rem;
   justify-self: center;
 
-  padding: 48px 32px 40px;
+  padding: 3rem 2rem 2.5rem;
   border-radius: ${({ theme }) => theme.radius.lg};
   background: ${({ theme }) => theme.colors.primarySoft};
 
@@ -240,8 +240,8 @@ const Illustration = styled.div`
     position: absolute;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 16px;
+    gap: 0.625rem;
+    padding: 0.75rem 1rem;
     border-radius: ${({ theme }) => theme.radius.md};
     background: ${({ theme }) => theme.colors.surface};
     border: 1px solid ${({ theme }) => theme.colors.line};
@@ -251,56 +251,56 @@ const Illustration = styled.div`
 
   & > .float strong {
     display: block;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 800;
   }
 
   & > .float small {
     display: block;
-    font-size: 12px;
+    font-size: 0.75rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   & > .float-top {
-    top: 20px;
-    right: -16px;
+    top: 1.25rem;
+    right: -1rem;
   }
 
   & > .float-top > span {
     display: grid;
     place-items: center;
-    width: 34px;
-    height: 34px;
+    width: 2.125rem;
+    height: 2.125rem;
     border-radius: ${({ theme }) => theme.radius.sm};
     background: ${({ theme }) => theme.colors.primary};
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 900;
     color: #fff;
   }
 
   & > .float-bottom {
-    bottom: 20px;
-    left: -16px;
+    bottom: 1.25rem;
+    left: -1rem;
   }
 
   & > .float-bottom > svg { color: ${({ theme }) => theme.colors.primary}; }
 
   ${({ theme }) => theme.media.tablet} {
-    max-width: 440px;
+    max-width: 27.5rem;
 
-    & > .float-top { right: 12px; }
-    & > .float-bottom { left: 12px; }
+    & > .float-top { right: 0.75rem; }
+    & > .float-bottom { left: 0.75rem; }
   }
 
   ${({ theme }) => theme.media.mobile} {
-    padding: 36px 20px 28px;
+    padding: 2.25rem 1.25rem 1.75rem;
     border-radius: ${({ theme }) => theme.radius.md};
 
-    & > .float { gap: 8px; padding: 8px 10px; }
-    & > .float-top { top: 10px; right: 8px; }
-    & > .float-bottom { bottom: 10px; left: 8px; }
-    & > .float strong { font-size: 12px; }
-    & > .float small { font-size: 11px; }
-    & > .float-top > span { width: 28px; height: 28px; font-size: 14px; }
+    & > .float { gap: 0.5rem; padding: 0.5rem 0.625rem; }
+    & > .float-top { top: 0.625rem; right: 0.5rem; }
+    & > .float-bottom { bottom: 0.625rem; left: 0.5rem; }
+    & > .float strong { font-size: 0.75rem; }
+    & > .float small { font-size: 0.6875rem; }
+    & > .float-top > span { width: 1.75rem; height: 1.75rem; font-size: 0.875rem; }
   }
 `;

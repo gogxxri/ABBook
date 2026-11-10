@@ -36,17 +36,17 @@ export default function Pagination({ page, totalPages, onChange }: PaginationPro
 const Nav = styled.nav`
   display: flex;
   justify-content: center;
-  gap: 4px;
-  margin-top: 24px;
+  gap: 0.25rem;
+  margin-top: 1.5rem;
 
   & > button {
     display: grid;
     place-items: center;
-    min-width: 32px;
-    height: 32px;
-    padding: 0 6px;
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0 0.375rem;
     border-radius: ${({ theme }) => theme.radius.sm};
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
     color: ${({ theme }) => theme.colors.text};
   }

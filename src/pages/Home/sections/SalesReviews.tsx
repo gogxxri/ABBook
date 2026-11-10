@@ -44,11 +44,11 @@ export default function SalesReviews() {
 const List = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 
   & li > div {
     display: block;
-    padding: 16px;
+    padding: 1rem;
     border-radius: ${({ theme }) => theme.radius.md};
     background: ${({ theme }) => theme.colors.background};
     transition: background 0.15s ease;
@@ -57,7 +57,7 @@ const List = styled.ul`
 
   & strong {
     display: block;
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: ${({ theme }) => theme.colors.ink};
     overflow: hidden;
     text-overflow: ellipsis;
@@ -65,8 +65,8 @@ const List = styled.ul`
   }
 
   & p {
-    margin-top: 4px;
-    font-size: 14px;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
     color: ${({ theme }) => theme.colors.text};
     overflow: hidden;
     text-overflow: ellipsis;
@@ -77,16 +77,16 @@ const List = styled.ul`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 4px;
-    margin-top: 8px;
-    font-size: 12px;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
     color: ${({ theme }) => theme.colors.subtle};
   }
 
-  & time { margin-left: 6px; }
+  & time { margin-left: 0.375rem; }
 
   ${({ theme }) => theme.media.mobile} {
-    & li > div { padding: 14px; }
-    & p { font-size: 13px; }
+    & li > div { padding: 0.875rem; }
+    & p { font-size: 0.8125rem; }
   }
 `;

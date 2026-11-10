@@ -71,16 +71,16 @@ export default function PriceCategories() {
 const Grid = styled.ul`
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 10px;
+  gap: 0.625rem;
 
   & button {
     width: 100%;
-    height: 44px;
-    padding: 0 8px;
+    height: 2.75rem;
+    padding: 0 0.5rem;
     border: 1px solid ${({ theme }) => theme.colors.line};
     border-radius: ${({ theme }) => theme.radius.sm};
     background: ${({ theme }) => theme.colors.surface};
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
     color: ${({ theme }) => theme.colors.text};
     white-space: nowrap;
@@ -103,31 +103,31 @@ const Grid = styled.ul`
 
   ${({ theme }) => theme.media.mobile} {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
+    gap: 0.5rem;
 
-    & button { height: 40px; font-size: 13px; }
+    & button { height: 2.5rem; font-size: 0.8125rem; }
   }
 `;
 
 const Items = styled.div`
-  margin-top: 20px;
-  padding: 8px 20px;
+  margin-top: 1.25rem;
+  padding: 0.5rem 1.25rem;
   border-radius: ${({ theme }) => theme.radius.md};
   background: ${({ theme }) => theme.colors.background};
 
   & > ul {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 40px;
+    column-gap: 2.5rem;
   }
 
   & li {
     display: flex;
     justify-content: space-between;
-    gap: 12px;
-    padding: 12px 0;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
     border-bottom: 1px solid ${({ theme }) => theme.colors.line};
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   & li > span {
@@ -144,9 +144,9 @@ const Items = styled.div`
   }
 
   ${({ theme }) => theme.media.mobile} {
-    padding: 4px 14px;
+    padding: 0.25rem 0.875rem;
 
     & > ul { grid-template-columns: minmax(0, 1fr); }
-    & li { font-size: 13px; }
+    & li { font-size: 0.8125rem; }
   }
 `;

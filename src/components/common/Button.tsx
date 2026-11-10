@@ -22,16 +22,16 @@ export default function Button({ icon, children, type = 'button', ...rest }: But
 }
 
 const SIZE_STYLE: Record<ButtonSize, ReturnType<typeof css>> = {
-  sm: css`height: 32px; padding: 0 12px; font-size: 13px;`,
-  md: css`height: 40px; padding: 0 16px; font-size: 14px;`,
-  lg: css`height: 46px; padding: 0 20px; font-size: 15px;`,
+  sm: css`height: 2rem; padding: 0 0.75rem; font-size: 0.8125rem;`,
+  md: css`height: 2.5rem; padding: 0 1rem; font-size: 0.875rem;`,
+  lg: css`height: 2.875rem; padding: 0 1.25rem; font-size: 0.9375rem;`,
 };
 
 const StyledButton = styled.button<Omit<ButtonProps, 'icon' | 'children'>>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 0.375rem;
   width: ${({ $block }) => ($block ? '100%' : 'auto')};
   border-radius: ${({ theme }) => theme.radius.sm};
   font-weight: 700;

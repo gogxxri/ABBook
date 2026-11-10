@@ -172,31 +172,31 @@ export default function QuoteHero() {
 }
 
 const Hero = styled.section`
-  padding: 80px 0 96px;
+  padding: 5rem 0 6rem;
   background: ${({ theme }) => theme.colors.background};
 
   ${({ theme }) => theme.media.tablet} {
-    padding: 56px 0 72px;
+    padding: 3.5rem 0 4.5rem;
   }
 
   ${({ theme }) => theme.media.mobile} {
-    padding: 32px 0 48px;
+    padding: 2rem 0 3rem;
   }
 `;
 
 const Inner = styled(Container)`
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 520px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 32.5rem);
   align-items: center;
-  gap: 64px;
+  gap: 4rem;
 
   ${({ theme }) => theme.media.tablet} {
     grid-template-columns: minmax(0, 1fr);
-    gap: 40px;
+    gap: 2.5rem;
   }
 
   ${({ theme }) => theme.media.mobile} {
-    gap: 28px;
+    gap: 1.75rem;
   }
 `;
 
@@ -204,19 +204,19 @@ const Copy = styled.div`
   & > .badge {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    height: 30px;
-    padding: 0 12px;
+    gap: 0.375rem;
+    height: 1.875rem;
+    padding: 0 0.75rem;
     border-radius: ${({ theme }) => theme.radius.full};
     background: ${({ theme }) => theme.colors.primarySoft};
     color: ${({ theme }) => theme.colors.primary};
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 700;
   }
 
   & > h2 {
-    margin-top: 20px;
-    font-size: 44px;
+    margin-top: 1.25rem;
+    font-size: 2.75rem;
     line-height: 1.22;
     font-weight: 800;
     letter-spacing: -0.035em;
@@ -229,24 +229,24 @@ const Copy = styled.div`
   }
 
   & > p {
-    max-width: 460px;
-    margin-top: 20px;
-    font-size: 18px;
+    max-width: 28.75rem;
+    margin-top: 1.25rem;
+    font-size: 1.125rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   & > ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 20px;
-    margin-top: 32px;
+    gap: 0.625rem 1.25rem;
+    margin-top: 2rem;
   }
 
   & > ul > li {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 15px;
+    gap: 0.375rem;
+    font-size: 0.9375rem;
     font-weight: 600;
     color: ${({ theme }) => theme.colors.text};
   }
@@ -254,49 +254,49 @@ const Copy = styled.div`
   & > ul svg { color: ${({ theme }) => theme.colors.primary}; }
 
   ${({ theme }) => theme.media.tablet} {
-    & > h2 { font-size: 36px; }
+    & > h2 { font-size: 2.25rem; }
   }
 
   ${({ theme }) => theme.media.mobile} {
-    & > h2 { margin-top: 14px; font-size: 28px; }
-    & > p { margin-top: 12px; font-size: 15px; }
-    & > ul { margin-top: 20px; gap: 8px 14px; }
-    & > ul > li { font-size: 13px; }
+    & > h2 { margin-top: 0.875rem; font-size: 1.75rem; }
+    & > p { margin-top: 0.75rem; font-size: 0.9375rem; }
+    & > ul { margin-top: 1.25rem; gap: 0.5rem 0.875rem; }
+    & > ul > li { font-size: 0.8125rem; }
   }
 
   ${({ theme }) => theme.media.small} {
-    & > h2 { font-size: 25px; }
+    & > h2 { font-size: 1.5625rem; }
   }
 `;
 
 const QuoteCard = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
   min-width: 0;
-  padding: 24px;
+  padding: 1.5rem;
   border: 1px solid ${({ theme }) => theme.colors.line};
   border-radius: ${({ theme }) => theme.radius.lg};
   background: ${({ theme }) => theme.colors.surface};
   box-shadow: ${({ theme }) => theme.shadow.card};
 
   ${({ theme }) => theme.media.mobile} {
-    gap: 12px;
-    padding: 16px;
+    gap: 0.75rem;
+    padding: 1rem;
   }
 `;
 
 const Tabs = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 4px;
+  padding: 0.25rem;
   border-radius: ${({ theme }) => theme.radius.md};
   background: ${({ theme }) => theme.colors.background};
 
   & > button {
-    height: 36px;
-    border-radius: 7px;
-    font-size: 14px;
+    height: 2.25rem;
+    border-radius: 0.4375rem;
+    font-size: 0.875rem;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.muted};
   }
@@ -312,12 +312,12 @@ const SpecField = styled.div`
   & > textarea {
     display: block;
     width: 100%;
-    height: 168px;
-    padding: 16px;
+    height: 10.5rem;
+    padding: 1rem;
     border: 1px solid ${({ theme }) => theme.colors.line};
     border-radius: ${({ theme }) => theme.radius.md};
     background: ${({ theme }) => theme.colors.surface};
-    font-size: 15px;
+    font-size: 0.9375rem;
     line-height: 1.6;
     resize: none;
   }
@@ -331,7 +331,7 @@ const SpecField = styled.div`
   }
 
   ${({ theme }) => theme.media.mobile} {
-    & > textarea { height: 148px; padding: 14px; font-size: 14px; }
+    & > textarea { height: 9.25rem; padding: 0.875rem; font-size: 0.875rem; }
   }
 `;
 
@@ -341,10 +341,10 @@ const PhotoField = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 0.375rem;
     width: 100%;
-    height: 168px;
-    padding: 16px;
+    height: 10.5rem;
+    padding: 1rem;
     border: 1.5px dashed ${({ theme }) => theme.colors.line};
     border-radius: ${({ theme }) => theme.radius.md};
     color: ${({ theme }) => theme.colors.muted};
@@ -358,15 +358,15 @@ const PhotoField = styled.div`
   }
 
   & > .dropzone > strong {
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: ${({ theme }) => theme.colors.ink};
   }
 
-  & > .dropzone > span { font-size: 13px; }
+  & > .dropzone > span { font-size: 0.8125rem; }
 
   & > .preview {
     position: relative;
-    height: 168px;
+    height: 10.5rem;
     overflow: hidden;
     border-radius: ${({ theme }) => theme.radius.md};
     background: ${({ theme }) => theme.colors.background};
@@ -380,19 +380,19 @@ const PhotoField = styled.div`
 
   & > .preview > button {
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 0.5rem;
+    right: 0.5rem;
     display: grid;
     place-items: center;
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     border-radius: 50%;
     background: rgba(17, 24, 39, 0.7);
     color: #fff;
   }
 
   ${({ theme }) => theme.media.mobile} {
-    & > .dropzone, & > .preview { height: 148px; }
+    & > .dropzone, & > .preview { height: 9.25rem; }
   }
 `;
 
@@ -400,18 +400,18 @@ const Result = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding: 18px 20px;
+  gap: 0.75rem;
+  padding: 1.125rem 1.25rem;
   border-radius: ${({ theme }) => theme.radius.md};
   background: ${({ theme }) => theme.colors.dark};
   color: #fff;
 
   & > div { display: flex; flex-direction: column; min-width: 0; }
-  & > div > span { font-size: 14px; font-weight: 600; }
-  & > div > small { font-size: 12px; color: rgba(255, 255, 255, 0.6); }
+  & > div > span { font-size: 0.875rem; font-weight: 600; }
+  & > div > small { font-size: 0.75rem; color: rgba(255, 255, 255, 0.6); }
 
   & > strong {
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 800;
     letter-spacing: -0.02em;
     text-align: right;
@@ -419,8 +419,8 @@ const Result = styled.div`
   }
 
   ${({ theme }) => theme.media.mobile} {
-    padding: 14px 16px;
-    & > strong { font-size: 20px; }
+    padding: 0.875rem 1rem;
+    & > strong { font-size: 1.25rem; }
   }
 
   ${({ theme }) => theme.media.small} {
@@ -433,16 +433,16 @@ const Result = styled.div`
 const Lines = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  max-height: 112px;
+  gap: 0.375rem;
+  max-height: 7rem;
   overflow-y: auto;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: ${({ theme }) => theme.colors.muted};
 
   & > li {
     display: flex;
     justify-content: space-between;
-    gap: 12px;
+    gap: 0.75rem;
   }
 
   & > li > span:first-child {
@@ -462,7 +462,7 @@ const Lines = styled.ul`
 const ActionRow = styled.div`
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 8px;
+  gap: 0.5rem;
 
   ${({ theme }) => theme.media.small} {
     grid-template-columns: minmax(0, 1fr);

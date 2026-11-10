@@ -171,14 +171,14 @@ const ItemRow = styled.li`
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto auto;
   align-items: center;
-  gap: 16px;
-  padding: 12px 16px;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
 
   & > div:first-child { min-width: 0; }
 
   & strong {
     display: block;
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: ${({ theme }) => theme.colors.ink};
   }
 
@@ -187,12 +187,12 @@ const ItemRow = styled.li`
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 12px;
+    font-size: 0.75rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   & > .price {
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.ink};
     white-space: nowrap;
@@ -200,13 +200,13 @@ const ItemRow = styled.li`
 
   & > .actions {
     display: flex;
-    gap: 4px;
+    gap: 0.25rem;
   }
 
   ${({ theme }) => theme.media.mobile} {
     grid-template-columns: minmax(0, 1fr) auto;
-    gap: 8px 12px;
-    padding: 12px;
+    gap: 0.5rem 0.75rem;
+    padding: 0.75rem;
 
     & > .actions { grid-column: 1 / -1; justify-content: flex-end; }
   }
@@ -215,5 +215,5 @@ const ItemRow = styled.li`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 0.875rem;
 `;

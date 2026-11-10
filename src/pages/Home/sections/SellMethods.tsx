@@ -50,13 +50,13 @@ export default function SellMethods() {
 const Grid = styled.ul`
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+  gap: 1.25rem;
 
   & a {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 28px 24px;
+    padding: 1.75rem 1.5rem;
     border: 1px solid ${({ theme }) => theme.colors.line};
     border-radius: ${({ theme }) => theme.radius.lg};
     background: ${({ theme }) => theme.colors.surface};
@@ -73,14 +73,14 @@ const Grid = styled.ul`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 28px;
+    margin-bottom: 1.75rem;
   }
 
   & .icon {
     display: grid;
     place-items: center;
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
     border-radius: ${({ theme }) => theme.radius.md};
     background: ${({ theme }) => theme.colors.primarySoft};
     color: ${({ theme }) => theme.colors.primary};
@@ -90,8 +90,8 @@ const Grid = styled.ul`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
-    font-size: 20px;
+    gap: 0.5rem;
+    font-size: 1.25rem;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.ink};
   }
@@ -99,8 +99,8 @@ const Grid = styled.ul`
   & h3 > svg { flex-shrink: 0; color: ${({ theme }) => theme.colors.subtle}; }
 
   & p {
-    margin-top: 8px;
-    font-size: 15px;
+    margin-top: 0.5rem;
+    font-size: 0.9375rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
@@ -109,13 +109,13 @@ const Grid = styled.ul`
   }
 
   ${({ theme }) => theme.media.mobile} {
-    gap: 10px;
+    gap: 0.625rem;
 
-    & a { padding: 18px 16px; border-radius: ${({ theme }) => theme.radius.md}; }
-    & .head { margin-bottom: 16px; }
-    & .icon { width: 40px; height: 40px; }
-    & h3 { font-size: 16px; }
-    & p { font-size: 13px; }
+    & a { padding: 1.125rem 1rem; border-radius: ${({ theme }) => theme.radius.md}; }
+    & .head { margin-bottom: 1rem; }
+    & .icon { width: 2.5rem; height: 2.5rem; }
+    & h3 { font-size: 1rem; }
+    & p { font-size: 0.8125rem; }
   }
 
   ${({ theme }) => theme.media.small} {

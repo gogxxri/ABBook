@@ -62,7 +62,7 @@ export default function AdminLayout() {
 
 const Shell = styled.div`
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
+  grid-template-columns: 15rem minmax(0, 1fr);
   min-height: 100dvh;
 
   ${({ theme }) => theme.media.tablet} {
@@ -76,19 +76,19 @@ const Side = styled.aside`
   display: flex;
   flex-direction: column;
   height: 100dvh;
-  padding: 20px 12px;
+  padding: 1.25rem 0.75rem;
   border-right: 1px solid ${({ theme }) => theme.colors.line};
   background: ${({ theme }) => theme.colors.surface};
 
   & > .brand {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 0 8px 20px;
+    gap: 0.5rem;
+    padding: 0 0.5rem 1.25rem;
   }
 
   & > .brand > span {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.muted};
   }
@@ -102,11 +102,11 @@ const Side = styled.aside`
   & > nav > a {
     display: flex;
     align-items: center;
-    gap: 10px;
-    height: 40px;
-    padding: 0 12px;
+    gap: 0.625rem;
+    height: 2.5rem;
+    padding: 0 0.75rem;
     border-radius: ${({ theme }) => theme.radius.sm};
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
     color: ${({ theme }) => theme.colors.text};
     white-space: nowrap;
@@ -122,11 +122,11 @@ const Side = styled.aside`
   & > .account {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
     margin-top: auto;
-    padding: 12px 8px 0;
+    padding: 0.75rem 0.5rem 0;
     border-top: 1px solid ${({ theme }) => theme.colors.line};
-    font-size: 12px;
+    font-size: 0.75rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
@@ -139,8 +139,8 @@ const Side = styled.aside`
   & > .account > button {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 13px;
+    gap: 0.375rem;
+    font-size: 0.8125rem;
     font-weight: 600;
     color: ${({ theme }) => theme.colors.text};
   }
@@ -150,9 +150,9 @@ const Side = styled.aside`
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    gap: 8px 12px;
+    gap: 0.5rem 0.75rem;
     height: auto;
-    padding: 10px 16px;
+    padding: 0.625rem 1rem;
     border-right: 0;
     border-bottom: 1px solid ${({ theme }) => theme.colors.line};
 
@@ -165,7 +165,7 @@ const Side = styled.aside`
       overflow-x: auto;
     }
 
-    & > nav > a { height: 34px; padding: 0 10px; font-size: 13px; }
+    & > nav > a { height: 2.125rem; padding: 0 0.625rem; font-size: 0.8125rem; }
     & > nav > a > svg { display: none; }
 
     & > .account {
@@ -182,9 +182,9 @@ const Side = styled.aside`
 
 const Content = styled.main`
   min-width: 0;
-  padding: 32px;
+  padding: 2rem;
 
   ${({ theme }) => theme.media.mobile} {
-    padding: 16px;
+    padding: 1rem;
   }
 `;

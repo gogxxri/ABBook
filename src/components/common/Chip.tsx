@@ -7,10 +7,10 @@ const Chip = styled.span<{ $tone?: ChipTone }>`
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
-  height: 26px;
-  padding: 0 10px;
+  height: 1.625rem;
+  padding: 0 0.625rem;
   border-radius: ${({ theme }) => theme.radius.full};
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
   white-space: nowrap;
 

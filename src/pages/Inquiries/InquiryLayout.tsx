@@ -29,11 +29,11 @@ export default function InquiryLayout({ title, description, action, children }: 
 }
 
 const Wrapper = styled.section`
-  min-height: calc(100vh - 300px);
-  padding: 56px 0 96px;
+  min-height: calc(100vh - 18.75rem);
+  padding: 3.5rem 0 6rem;
 
   ${({ theme }) => theme.media.mobile} {
-    padding: 28px 0 64px;
+    padding: 1.75rem 0 4rem;
   }
 `;
 
@@ -41,38 +41,38 @@ const Head = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 16px;
-  max-width: 880px;
-  margin: 0 auto 20px;
+  gap: 1rem;
+  max-width: 55rem;
+  margin: 0 auto 1.25rem;
 
   & h1 {
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 800;
     letter-spacing: -0.02em;
     color: ${({ theme }) => theme.colors.ink};
   }
 
   & p {
-    margin-top: 6px;
-    font-size: 14px;
+    margin-top: 0.375rem;
+    font-size: 0.875rem;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   ${({ theme }) => theme.media.mobile} {
-    & h1 { font-size: 22px; }
+    & h1 { font-size: 1.375rem; }
   }
 `;
 
 const Card = styled.div`
-  max-width: 880px;
+  max-width: 55rem;
   margin: 0 auto;
-  padding: 28px;
+  padding: 1.75rem;
   border: 1px solid ${({ theme }) => theme.colors.line};
   border-radius: ${({ theme }) => theme.radius.lg};
   background: ${({ theme }) => theme.colors.surface};
 
   ${({ theme }) => theme.media.mobile} {
-    padding: 16px;
+    padding: 1rem;
     border-radius: ${({ theme }) => theme.radius.md};
   }
 `;

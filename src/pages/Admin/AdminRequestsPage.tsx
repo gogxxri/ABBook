@@ -61,7 +61,7 @@ export default function AdminRequestsPage() {
                 <div>
                   <strong>
                     {request.customer_name} · {SELL_METHOD_LABEL[request.method]}
-                    {request.photo_path && <ImageIcon size={14} aria-label="사진 첨부" style={{ marginLeft: 6, verticalAlign: -2 }} />}
+                    {request.photo_path && <ImageIcon size={14} aria-label="사진 첨부" style={{ marginLeft: '0.375rem', verticalAlign: '-2px' }} />}
                   </strong>
                   <p>{request.items_text || '사진 견적'}</p>
                 </div>
@@ -154,7 +154,7 @@ function RequestDetailModal({ request, onClose }: RequestDetailModalProps) {
         </Select>
       </Field>
       <Field label="관리자 메모" htmlFor="request-admin-memo" hint="고객에게 노출되지 않아요.">
-        <Textarea id="request-admin-memo" value={adminMemo} onChange={(event) => setAdminMemo(event.target.value)} style={{ minHeight: 90 }} />
+        <Textarea id="request-admin-memo" value={adminMemo} onChange={(event) => setAdminMemo(event.target.value)} style={{ minHeight: '5.625rem' }} />
       </Field>
     </Modal>
   );
@@ -163,16 +163,16 @@ function RequestDetailModal({ request, onClose }: RequestDetailModalProps) {
 const Photo = styled.div`
   display: grid;
   place-items: center;
-  min-height: 120px;
+  min-height: 7.5rem;
   border-radius: ${({ theme }) => theme.radius.md};
   background: ${({ theme }) => theme.colors.background};
   overflow: hidden;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: ${({ theme }) => theme.colors.muted};
 
   & > img {
     width: 100%;
-    max-height: 360px;
+    max-height: 22.5rem;
     object-fit: contain;
   }
 `;

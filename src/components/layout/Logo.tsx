@@ -21,12 +21,12 @@ const LogoLink = styled(Link)<{ $height: number }>`
 
   & > img {
     width: auto;
-    height: ${({ $height }) => $height}px;
+    height: ${({ $height }) => $height / 16}rem;
     /* 로고 이미지의 흰 배경을 밝은 배경과 자연스럽게 합성 */
     mix-blend-mode: multiply;
   }
 
   ${({ theme }) => theme.media.mobile} {
-    & > img { height: ${({ $height }) => Math.round($height * 0.86)}px; }
+    & > img { height: ${({ $height }) => (Math.round($height * 0.86) / 16).toFixed(4)}rem; }
   }
 `;

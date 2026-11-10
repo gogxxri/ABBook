@@ -58,12 +58,12 @@ export default function Faq() {
 const Layout = styled.div`
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
-  gap: 48px;
+  gap: 3rem;
 
   /* 질문 목록 스크롤 동안 제목 고정 */
   & > header {
     position: sticky;
-    top: calc(${({ theme }) => theme.layout.headerHeight} + 32px);
+    top: calc(${({ theme }) => theme.layout.headerHeight} + 2rem);
     align-self: start;
   }
 
@@ -71,7 +71,7 @@ const Layout = styled.div`
     font-weight: 700;
     color: ${({ theme }) => theme.colors.primary};
     text-decoration: underline;
-    text-underline-offset: 3px;
+    text-underline-offset: 0.1875rem;
   }
 
   ${({ theme }) => theme.media.tablet} {
@@ -92,9 +92,9 @@ const List = styled.ul`
     width: 100%;
     text-align: left;
     align-items: center;
-    gap: 12px;
-    padding: 20px 4px;
-    font-size: 16px;
+    gap: 0.75rem;
+    padding: 1.25rem 0.25rem;
+    font-size: 1rem;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.ink};
   }
@@ -125,14 +125,14 @@ const List = styled.ul`
   & .answer > div { overflow: hidden; }
 
   & p {
-    padding: 0 4px 20px 28px;
-    font-size: 15px;
+    padding: 0 0.25rem 1.25rem 1.75rem;
+    font-size: 0.9375rem;
     line-height: 1.7;
     color: ${({ theme }) => theme.colors.muted};
   }
 
   ${({ theme }) => theme.media.mobile} {
-    & li > button { padding: 16px 2px; font-size: 15px; }
-    & p { padding: 0 2px 16px 24px; font-size: 14px; }
+    & li > button { padding: 1rem 2px; font-size: 0.9375rem; }
+    & p { padding: 0 2px 1rem 1.5rem; font-size: 0.875rem; }
   }
 `;
