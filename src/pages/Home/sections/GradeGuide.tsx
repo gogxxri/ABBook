@@ -1,8 +1,17 @@
+import type { CSSProperties } from 'react';
 import styled from 'styled-components';
 
 import { Container, Section } from '../../../components/common/Container';
 import SectionHeader from '../../../components/common/SectionHeader';
-import { GRADE_GUIDES } from '../../../constants/home';
+import { GRADE_GUIDES, type ConditionGrade } from '../../../constants/home';
+
+// 등급별 파랑 (S 진함 → C 옅음)
+const GRADE_BLUE: Record<ConditionGrade, string> = {
+  S: '#0A2E86',
+  A: '#0A43C2',
+  B: '#4F7FE0',
+  C: '#93AFEA',
+};
 
 export default function GradeGuide() {
   return (
@@ -22,7 +31,7 @@ export default function GradeGuide() {
           </div>
           <ul>
             {GRADE_GUIDES.map((guide) => (
-              <li key={guide.grade}>
+              <li key={guide.grade} style={{ '--grade-color': GRADE_BLUE[guide.grade] } as CSSProperties}>
                 <strong className="grade">{guide.grade}</strong>
                 <span className="name">{guide.name}</span>
                 <p className="criteria">{guide.criteria.join(' · ')}</p>
@@ -75,7 +84,7 @@ const Table = styled.div`
     font-size: 28px;
     font-weight: 900;
     line-height: 1;
-    color: ${({ theme }) => theme.colors.ink};
+    color: var(--grade-color);
   }
 
   & .name {
@@ -92,7 +101,7 @@ const Table = styled.div`
   & .rate {
     font-size: 15px;
     font-weight: 700;
-    color: ${({ theme }) => theme.colors.primary};
+    color: var(--grade-color);
     white-space: nowrap;
   }
 
