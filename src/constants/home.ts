@@ -30,7 +30,7 @@ export interface FaqItem {
 }
 
 export const NAV_ITEMS = [
-  { label: 'AI 견적', href: '/#quote' },
+  { label: '빠른 견적', href: '/#quote' },
   { label: '판매 과정', href: '/#process' },
   { label: '등급 기준', href: '/#grades' },
   { label: '단가표', href: '/#prices' },
@@ -46,7 +46,7 @@ export const SELL_METHODS: SellMethod[] = [
 ];
 
 export const SELL_STEPS: SellStep[] = [
-  { title: '예상가 확인', description: 'AI 견적이나 단가표로 받을 금액을 먼저 확인해요.', meta: '1분' },
+  { title: '예상가 확인', description: '빠른 견적이나 단가표로 받을 금액을 먼저 확인해요.', meta: '1분' },
   { title: '매입 신청', description: '연락처와 희망 방법(택배·출장·방문·퀵)을 남기면 담당자가 연락드려요.', meta: '3분' },
   { title: '정밀 검수', description: '입고 후 성능·외관을 점검하고, 견적과 차이가 있으면 사진과 함께 안내해요.', meta: '입고 당일' },
   { title: '당일 입금', description: '최종 금액에 동의하시면 그날 바로 계좌로 입금해요.', meta: '승인 후 즉시' },
@@ -60,7 +60,7 @@ export const GRADE_GUIDES: GradeGuide[] = [
 ];
 
 export const FAQ_ITEMS: FaqItem[] = [
-  { question: 'AI 견적 금액 그대로 받을 수 있나요?', answer: 'AI 견적은 단가표 기준 예상 금액이에요. 입고 후 검수에서 상태 등급이 확정되며, 차이가 생기면 사진과 함께 먼저 안내드리고 동의하신 경우에만 진행해요.' },
+  { question: '빠른 견적 금액 그대로 받을 수 있나요?', answer: '빠른 견적은 단가표 기준 예상 금액이에요. 입고 후 검수에서 상태 등급이 확정되며, 차이가 생기면 사진과 함께 먼저 안내드리고 동의하신 경우에만 진행해요.' },
   { question: '고장 나거나 액정이 깨진 제품도 매입하나요?', answer: '네, C등급(부품용)으로 매입해요. 부팅이 안 되거나 액정이 파손된 제품도 부품 가치를 기준으로 금액을 안내드려요.' },
   { question: '저장된 데이터는 어떻게 처리되나요?', answer: '판매 전 초기화를 권장드리지만, 입고된 모든 저장장치는 전용 도구로 완전 삭제한 뒤 재판매하거나 폐기해요.' },
   { question: '입금은 언제 되나요?', answer: '검수 결과에 동의하시면 당일 입금이 원칙이에요. 영업시간 이후 입고분은 다음 영업일 오전에 입금돼요.' },

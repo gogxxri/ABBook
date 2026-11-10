@@ -63,13 +63,13 @@ export default function QuoteHero() {
         <Copy>
           <span className="badge">
             <Sparkles size={14} aria-hidden="true" />
-            AI 자동견적
+            빠른 견적
           </span>
-          <h1>
+          <h2>
             팔기 전에,
             <br />
             <em>얼마 받을지</em> 먼저 확인하세요
-          </h1>
+          </h2>
           <p>모델명을 적거나 사양 사진을 올리면 매입 단가표 기준으로 예상 금액을 바로 알려드려요.</p>
           <ul>
             {HERO_POINTS.map((point) => (
@@ -81,7 +81,7 @@ export default function QuoteHero() {
           </ul>
         </Copy>
 
-        <QuoteCard aria-label="AI 자동견적">
+        <QuoteCard aria-label="빠른 견적">
           <Tabs role="tablist">
             {QUOTE_TABS.map((tab) => (
               <button
@@ -216,16 +216,16 @@ const Copy = styled.div`
     font-weight: 700;
   }
 
-  & > h1 {
+  & > h2 {
     margin-top: 20px;
-    font-size: 52px;
+    font-size: 44px;
     line-height: 1.22;
     font-weight: 800;
     letter-spacing: -0.035em;
     color: ${({ theme }) => theme.colors.ink};
   }
 
-  & > h1 > em {
+  & > h2 > em {
     font-style: normal;
     color: ${({ theme }) => theme.colors.primary};
   }
@@ -256,18 +256,18 @@ const Copy = styled.div`
   & > ul svg { color: ${({ theme }) => theme.colors.primary}; }
 
   ${({ theme }) => theme.media.tablet} {
-    & > h1 { font-size: 40px; }
+    & > h2 { font-size: 36px; }
   }
 
   ${({ theme }) => theme.media.mobile} {
-    & > h1 { margin-top: 14px; font-size: 28px; }
+    & > h2 { margin-top: 14px; font-size: 28px; }
     & > p { margin-top: 12px; font-size: 15px; }
     & > ul { margin-top: 20px; gap: 8px 14px; }
     & > ul > li { font-size: 13px; }
   }
 
   ${({ theme }) => theme.media.small} {
-    & > h1 { font-size: 25px; }
+    & > h2 { font-size: 25px; }
   }
 `;
 
