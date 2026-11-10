@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Menu, Phone, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Container } from '../common/Container';
@@ -34,9 +35,9 @@ export default function Header() {
           <Logo />
           <Nav aria-label="주요 메뉴">
             {NAV_ITEMS.map((item) => (
-              <a key={item.href} href={item.href}>
+              <Link key={item.href} to={item.href}>
                 {item.label}
-              </a>
+              </Link>
             ))}
           </Nav>
           <Actions>
@@ -61,9 +62,9 @@ export default function Header() {
         </DrawerHead>
         <DrawerNav>
           {NAV_ITEMS.map((item) => (
-            <a key={item.href} href={item.href} onClick={closeDrawer} tabIndex={isDrawerOpen ? 0 : -1}>
+            <Link key={item.href} to={item.href} onClick={closeDrawer} tabIndex={isDrawerOpen ? 0 : -1}>
               {item.label}
-            </a>
+            </Link>
           ))}
         </DrawerNav>
         <DrawerFoot>

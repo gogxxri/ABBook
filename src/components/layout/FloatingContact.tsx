@@ -1,4 +1,5 @@
 import { MessageCircle, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { COMPANY_INFO } from '../../constants/home';
@@ -9,10 +10,10 @@ export default function FloatingContact() {
       <a href={`tel:${COMPANY_INFO.phone}`} className="call" aria-label="전화 상담">
         <Phone size={18} />
       </a>
-      <a href="#quote" className="kakao" aria-label="카카오톡 상담">
+      <Link to="/#quote" className="kakao" aria-label="카카오톡 상담">
         <MessageCircle size={18} />
         <span>카톡 상담</span>
-      </a>
+      </Link>
     </Wrapper>
   );
 }
