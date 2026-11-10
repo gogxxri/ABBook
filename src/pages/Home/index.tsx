@@ -1,20 +1,22 @@
 import AboutContact from './sections/AboutContact';
 import BoardSection from './sections/BoardSection';
+import Faq from './sections/Faq';
+import GradeGuide from './sections/GradeGuide';
 import PriceCategories from './sections/PriceCategories';
 import QuoteHero from './sections/QuoteHero';
 import SellMethods from './sections/SellMethods';
-import ServerCta from './sections/ServerCta';
-import TrustStats from './sections/TrustStats';
+import SellProcess from './sections/SellProcess';
 
 export default function HomePage() {
   return (
     <>
       <QuoteHero />
+      <SellProcess />
       <SellMethods />
-      <TrustStats />
+      <GradeGuide />
       <PriceCategories />
       <BoardSection />
-      <ServerCta />
+      <Faq />
       <AboutContact />
     </>
   );

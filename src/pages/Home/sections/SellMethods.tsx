@@ -17,7 +17,7 @@ const METHOD_ICON: Record<SellMethodKey, LucideIcon> = {
 
 export default function SellMethods() {
   return (
-    <Section id="methods">
+    <Section id="methods" $tone="white">
       <Container>
         <SectionHeader eyebrow="HOW TO SELL" title="나에게 맞는 매입 방법" description="수량과 위치에 맞춰 가장 편한 방법을 고르세요." />
         <Grid>
