@@ -53,6 +53,13 @@ const Grid = styled.ul`
     border: 1px solid ${({ theme }) => theme.colors.line};
     border-radius: ${({ theme }) => theme.radius.lg};
     background: ${({ theme }) => theme.colors.surface};
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  & > li:hover {
+    border-color: ${({ theme }) => theme.colors.primary};
+    box-shadow: ${({ theme }) => theme.shadow.card};
+    transform: translateY(-3px);
   }
 
   & .head {

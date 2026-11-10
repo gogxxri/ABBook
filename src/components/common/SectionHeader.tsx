@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react';
 import styled from 'styled-components';
 
+import { useInView } from '../../hooks/useInView';
+
 interface SectionHeaderProps {
   eyebrow: string;
   title: ReactNode;
@@ -9,8 +11,10 @@ interface SectionHeaderProps {
 }
 
 export default function SectionHeader({ eyebrow, title, description, action }: SectionHeaderProps) {
+  const { ref, isInView } = useInView<HTMLElement>(0.2); // 화면 진입 시 페이드업
+
   return (
-    <Wrapper>
+    <Wrapper ref={ref} $visible={isInView}>
       <div>
         <span>{eyebrow}</span>
         <h2>{title}</h2>
@@ -21,12 +25,21 @@ export default function SectionHeader({ eyebrow, title, description, action }: S
   );
 }
 
-const Wrapper = styled.header`
+const Wrapper = styled.header<{ $visible: boolean }>`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 40px;
+  opacity: ${({ $visible }) => ($visible ? 1 : 0)};
+  transform: translateY(${({ $visible }) => ($visible ? 0 : 16)}px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 
   & > div > span {
     display: block;
