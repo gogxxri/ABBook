@@ -1,6 +1,6 @@
 import { ArrowDown, BadgeCheck, Clock3, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 import { Container } from '../../../components/common/Container';
 
@@ -88,12 +88,6 @@ function LaptopSvg() {
     </svg>
   );
 }
-
-// 떠 있는 카드의 느린 상하 움직임
-const floating = keyframes`
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-`;
 
 const Visual = styled.section`
   position: relative;
@@ -253,13 +247,6 @@ const Illustration = styled.div`
     border: 1px solid ${({ theme }) => theme.colors.line};
     box-shadow: ${({ theme }) => theme.shadow.card};
     color: ${({ theme }) => theme.colors.ink};
-    animation: ${floating} 5s ease-in-out infinite;
-  }
-
-  & > .float-bottom { animation-delay: -2.5s; }
-
-  @media (prefers-reduced-motion: reduce) {
-    & > .float { animation: none; }
   }
 
   & > .float strong {

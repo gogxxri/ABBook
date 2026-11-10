@@ -10,7 +10,7 @@ import { useInView } from '../../../hooks/useInView';
 const STEP_DELAY = 450;
 
 export default function SellProcess() {
-  const { ref, isInView } = useInView<HTMLOListElement>(0.4); // 화면 진입 시 순차 색칠 시작
+  const { ref, isInView } = useInView<HTMLOListElement>({ threshold: 0.4, once: false }); // 화면에 들어올 때마다 순차 색칠
 
   return (
     <Section id="process" $tone="white">
@@ -33,7 +33,21 @@ export default function SellProcess() {
   );
 }
 
+// 진입 시에만 지연 transition 적용 → 화면을 벗어나면 즉시 초기화
 const activeStyle = css`
+  & > li:not(:last-child)::before {
+    transition: transform ${STEP_DELAY}ms ease calc(var(--step-delay) + 250ms);
+  }
+
+  & .number {
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    transition-delay: var(--step-delay);
+  }
+
+  & h3 { transition: color 0.3s ease var(--step-delay); }
+
+  & small { transition: background 0.3s ease var(--step-delay), color 0.3s ease var(--step-delay); }
+
   & .number {
     border-color: ${({ theme }) => theme.colors.primary};
     background: ${({ theme }) => theme.colors.primary};
@@ -82,7 +96,6 @@ const Steps = styled.ol<{ $active: boolean }>`
     background: ${({ theme }) => theme.colors.primary};
     transform: scale(0, 1);
     transform-origin: left center;
-    transition: transform ${STEP_DELAY}ms ease calc(var(--step-delay) + 250ms);
   }
 
   & .number {
@@ -96,15 +109,12 @@ const Steps = styled.ol<{ $active: boolean }>`
     font-size: 14px;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.subtle};
-    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-    transition-delay: var(--step-delay);
   }
 
   & h3 {
     font-size: 18px;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.muted};
-    transition: color 0.3s ease var(--step-delay);
   }
 
   & p {
@@ -122,7 +132,6 @@ const Steps = styled.ol<{ $active: boolean }>`
     font-size: 12px;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.subtle};
-    transition: background 0.3s ease var(--step-delay), color 0.3s ease var(--step-delay);
   }
 
   ${({ $active }) => $active && activeStyle}

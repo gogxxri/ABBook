@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -7,6 +8,9 @@ import SectionHeader from '../../../components/common/SectionHeader';
 import { FAQ_ITEMS } from '../../../constants/home';
 
 export default function Faq() {
+  // 상태
+  const [openIndex, setOpenIndex] = useState<number | null>(null); // 펼친 질문 (한 번에 하나)
+
   return (
     <Section id="faq">
       <Container>
@@ -21,18 +25,29 @@ export default function Faq() {
             }
           />
           <List>
-            {FAQ_ITEMS.map((item) => (
-              <li key={item.question}>
-                <details>
-                  <summary>
+            {FAQ_ITEMS.map((item, index) => {
+              const isOpen = openIndex === index;
+              return (
+                <li key={item.question}>
+                  <button
+                    type="button"
+                    id={`faq-q-${index}`}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-a-${index}`}
+                    onClick={() => setOpenIndex(isOpen ? null : index)}
+                  >
                     <span>Q</span>
                     {item.question}
                     <ChevronDown size={18} aria-hidden="true" />
-                  </summary>
-                  <p>{item.answer}</p>
-                </details>
-              </li>
-            ))}
+                  </button>
+                  <div id={`faq-a-${index}`} role="region" aria-labelledby={`faq-q-${index}`} className="answer" data-open={isOpen}>
+                    <div>
+                      <p>{item.answer}</p>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
           </List>
         </Layout>
       </Container>
@@ -72,34 +87,42 @@ const List = styled.ul`
 
   & > li { border-bottom: 1px solid ${({ theme }) => theme.colors.line}; }
 
-  & summary {
+  & li > button {
     display: flex;
+    width: 100%;
+    text-align: left;
     align-items: center;
     gap: 12px;
     padding: 20px 4px;
     font-size: 16px;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.ink};
-    list-style: none;
-    cursor: pointer;
   }
 
-  & summary::-webkit-details-marker { display: none; }
-
-  & summary > span {
+  & li > button > span {
     flex-shrink: 0;
     font-weight: 800;
     color: ${({ theme }) => theme.colors.primary};
   }
 
-  & summary > svg {
+  & li > button > svg {
     flex-shrink: 0;
     margin-left: auto;
     color: ${({ theme }) => theme.colors.subtle};
     transition: transform 0.2s ease;
   }
 
-  & details[open] summary > svg { transform: rotate(180deg); }
+  & li > button[aria-expanded='true'] > svg { transform: rotate(180deg); }
+
+  /* 높이 애니메이션: grid 0fr → 1fr */
+  & .answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.25s ease;
+  }
+
+  & .answer[data-open='true'] { grid-template-rows: 1fr; }
+  & .answer > div { overflow: hidden; }
 
   & p {
     padding: 0 4px 20px 28px;
@@ -109,7 +132,7 @@ const List = styled.ul`
   }
 
   ${({ theme }) => theme.media.mobile} {
-    & summary { padding: 16px 2px; font-size: 15px; }
+    & li > button { padding: 16px 2px; font-size: 15px; }
     & p { padding: 0 2px 16px 24px; font-size: 14px; }
   }
 `;
